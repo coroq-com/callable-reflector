@@ -8,7 +8,7 @@ use ReflectionFunction;
 use ReflectionFunctionAbstract;
 use ReflectionMethod;
 
-class Reflector {
+class CallableReflector {
   /**
    * Get a reflection of a callable
    * @param callable $callable

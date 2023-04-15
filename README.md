@@ -15,9 +15,9 @@ composer require coroq/callable-reflector
 ## Usage
 
 ```php
-use Coroq\CallableReflector\Reflector;
+use Coroq\CallableReflector\CallableReflector;
 
-$reflection = Reflector::createFromCallable($callable);
+$reflection = CallableReflector::createFromCallable($callable);
 ```
 
 `$callable` can be a closure, a function, a static method, an instance method, or an invokable object.
@@ -28,23 +28,23 @@ Here's an example for each type of callable:
 
 ```php
 // Function
-$reflection = Reflector::createFromCallable('strlen');
+$reflection = CallableReflector:createFromCallable('strlen');
 
 // Closure
 $closure = function($x) { return $x * 2; };
-$reflection = Reflector::createFromCallable($closure);
+$reflection = CallableReflector::createFromCallable($closure);
 
 // Static method
-$reflection = Reflector::createFromCallable('ExampleClass::staticMethod');
-$reflection = Reflector::createFromCallable([ExampleClass::class, 'staticMethod']);
+$reflection = CallableReflector::createFromCallable('ExampleClass::staticMethod');
+$reflection = CallableReflector::createFromCallable([ExampleClass::class, 'staticMethod']);
 
 // Instance method
 $object = new ExampleClass();
-$reflection = Reflector::createFromCallable([$object, 'instanceMethod']);
+$reflection = CallableReflector::createFromCallable([$object, 'instanceMethod']);
 
 // Invokable object
 $object = new InvokableClass(); // InvokableClass has __invoke()
-$reflection = Reflector::createFromCallable($object);
+$reflection = CallableReflector::createFromCallable($object);
 ```
 
 ## License
