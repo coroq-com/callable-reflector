@@ -1,0 +1,19 @@
+{
+    "name": "coroq/callable-reflector",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Coroq\\CallableReflector\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ozawa Masayuki",
+            "email": "ozawa@coroq.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    }
+}
